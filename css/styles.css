@@ -1,0 +1,661 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #161616;
+}
+
+.contenedor {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.header {
+    background-color: #0b0b0b;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo h2 {
+    color: white;
+    font-size: 18px;
+}
+
+.logo span {
+    color: #e32626;
+    font-size: 26px;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #e32626;
+}
+
+.btn-whatsapp {
+    background-color: #e32626;
+    color: white;
+    padding: 13px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #b91c1c;
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
+.hero {
+    min-height: 620px;
+
+    background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.72));
+
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-contenido {
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 90px);
+    line-height: 0.95;
+    font-weight: 900;
+}
+
+.hero h1 span {
+    color: #e32626;
+}
+
+.hero-subtitulo {
+    margin-top: 25px;
+    font-size: 24px;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn-principal,
+.btn-secundario {
+    display: inline-block;
+    padding: 16px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-principal {
+    background-color: #e32626;
+    color: white;
+}
+
+.btn-principal:hover {
+    background-color: #b91c1c;
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secundario:hover {
+    background-color: white;
+    color: #111;
+}
+
+
+/* =========================
+   SERVICIOS
+========================= */
+
+.servicios {
+    padding: 80px 0;
+    background-color: #f7f7f7;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-seccion p {
+    color: #e32626;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.titulo-seccion h2 {
+    font-size: 38px;
+    margin-top: 5px;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.servicio-card {
+    background-color: white;
+    padding: 35px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.servicio-card:hover {
+    transform: translateY(-7px);
+}
+
+.servicio-icono {
+    width: 55px;
+    height: 55px;
+    background-color: #e32626;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.servicio-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.servicio-card p {
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* =========================
+   COTIZACIÓN
+========================= */
+
+.cotizacion {
+    padding: 30px 0 70px;
+    background-color: #f7f7f7;
+}
+
+.cotizacion-caja {
+    background-color: #111;
+    color: white;
+
+    padding: 35px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 35px;
+}
+
+.cotizacion-texto {
+    flex: 1;
+}
+
+.cotizacion-texto h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.cotizacion-texto p {
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.cotizacion-formulario {
+    flex: 2;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) auto;
+    gap: 10px;
+}
+
+.cotizacion-formulario input {
+    width: 100%;
+
+    padding: 14px 12px;
+
+    border: 1px solid #444;
+    border-radius: 5px;
+
+    background-color: #222;
+    color: white;
+
+    outline: none;
+}
+
+.cotizacion-formulario input:focus {
+    border-color: #e32626;
+}
+
+.cotizacion-formulario input::placeholder {
+    color: #aaa;
+}
+
+.cotizacion-formulario button {
+    border: none;
+    border-radius: 5px;
+
+    padding: 14px 20px;
+
+    background-color: #e32626;
+    color: white;
+
+    font-weight: bold;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.cotizacion-formulario button:hover {
+    background-color: #b91c1c;
+}
+
+
+/* =========================
+   TRABAJOS REALIZADOS
+========================= */
+
+.trabajos {
+    padding: 70px 0 80px;
+    background-color: #ffffff;
+}
+
+.trabajos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.trabajo-card {
+    min-height: 220px;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.78),
+            rgba(0, 0, 0, 0.78)),
+        #333;
+
+    transition: 0.3s;
+}
+
+.trabajo-card:hover {
+    transform: translateY(-5px);
+}
+
+.trabajo-placeholder {
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    text-align: center;
+    color: white;
+}
+
+.trabajo-placeholder span {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.trabajo-placeholder h3 {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.trabajo-placeholder p {
+    color: #ddd;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* =========================
+   UBICACIÓN Y CONTACTO
+========================= */
+
+.ubicacion {
+    padding: 80px 0;
+    background-color: #f7f7f7;
+}
+
+.ubicacion-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 35px;
+    align-items: stretch;
+}
+
+.mapa {
+    min-height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border: 0;
+}
+
+.info-negocio {
+    background-color: #111;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.info-item span {
+    font-size: 28px;
+}
+
+.info-item h3 {
+    color: #e32626;
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.info-item p {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.info-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.info-item a:hover {
+    color: #e32626;
+}
+
+.btn-maps {
+    display: block;
+    background-color: #e32626;
+    color: white;
+
+    padding: 15px 20px;
+    border-radius: 6px;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-maps:hover {
+    background-color: #b91c1c;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: #090909;
+    color: white;
+    padding-top: 55px;
+}
+
+.footer-contenido {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr auto;
+    gap: 40px;
+    align-items: center;
+    padding-bottom: 45px;
+}
+
+.footer-marca h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.footer-marca h2 span {
+    color: #e32626;
+}
+
+.footer-marca p,
+.footer-datos p {
+    color: #aaa;
+    line-height: 1.7;
+}
+
+.btn-whatsapp-footer {
+    display: inline-block;
+    background-color: #e32626;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-whatsapp-footer:hover {
+    background-color: #b91c1c;
+    transform: translateY(-2px);
+}
+
+.footer-copy {
+    border-top: 1px solid #222;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-copy p {
+    color: #777;
+    font-size: 13px;
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 900px) {
+
+    .navegacion {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cotizacion-caja {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cotizacion-formulario {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trabajos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ubicacion-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+/* =========================
+   CELULARES
+========================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 14px 0;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .logo h2 {
+        text-align: center;
+    }
+
+    .hero {
+        min-height: 520px;
+    }
+
+    .hero-contenido {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-subtitulo {
+        font-size: 18px;
+    }
+
+    .hero-botones {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-principal,
+    .btn-secundario {
+        width: 100%;
+        text-align: center;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 30px;
+    }
+
+    .cotizacion-caja {
+        padding: 25px 20px;
+    }
+
+    .cotizacion-formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .cotizacion-formulario button {
+        width: 100%;
+    }
+
+    .trabajos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+}
